@@ -5,67 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pelican Grant Consulting Services</title>
     <style>
+        :root {
+            --primary-black: #000000;
+            --dark-gray: #111111;
+            --light-bg: #f4f4f4;
+            --text-color: #333333;
+            --old-gold: #CFB53B;
+            --gold-hover: #D4AF37;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            color: #333333;
+            color: var(--text-color);
+            background-color: #ffffff;
         }
+
         header {
-            background: #111111;
+            background: var(--dark-gray);
             color: #ffffff;
-            padding: 2rem 0;
+            padding: 2.5rem 0;
             text-align: center;
+            border-bottom: 4px solid var(--old-gold);
         }
-        .hero {
-            background: #f4f4f4;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        .hero h1 {
+
+        header h1 {
+            margin: 0;
             font-size: 2.5rem;
-            margin-bottom: 1rem;
+            letter-spacing: 1px;
         }
+
+        header p {
+            margin: 0.5rem 0 0;
+            color: var(--old-gold);
+            font-size: 1.1rem;
+        }
+
+        nav {
+            background: var(--primary-black);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--old-gold);
+        }
+
+        .hero {
+            background: var(--light-bg);
+            padding: 5rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 700px;
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            max-width: 750px;
             margin-left: auto;
             margin-right: auto;
+            color: #555555;
         }
-        .btn-black {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 12px 24px;
+
+        /* Buttons with Black Background and Old Gold Text */
+        .btn-gold-text {
+            background-color: var(--primary-black);
+            color: var(--old-gold);
+            padding: 14px 28px;
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
             display: inline-block;
             margin-right: 10px;
             margin-bottom: 10px;
+            border: 2px solid var(--primary-black);
+            transition: all 0.3s ease;
         }
-        .btn-white {
-            background-color: #ffffff;
-            color: #000000;
-            border: 2px solid #000000;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
+
+        .btn-gold-text:hover {
+            background-color: #222222;
+            color: var(--gold-hover);
+            border-color: var(--old-gold);
         }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
         section {
-            padding: 3rem 2rem;
-            max-width: 900px;
+            margin-bottom: 3rem;
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            color: var(--dark-gray);
+            border-bottom: 2px solid var(--old-gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            margin-top: 0;
+            color: var(--dark-gray);
+        }
+
+        .about-section, .contact-section {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+        }
+
+        .about-content, .contact-content {
+            max-width: 800px;
             margin: 0 auto;
         }
+
         footer {
             text-align: center;
-            padding: 1.5rem;
-            background: #111111;
+            padding: 2.5rem;
+            background: var(--dark-gray);
             color: #ffffff;
+            border-top: 4px solid var(--old-gold);
+        }
+
+        footer p {
+            margin: 0;
+            color: #cccccc;
         }
     </style>
 </head>
@@ -76,27 +179,71 @@
         <p>Securing funding and empowering organizations for success.</p>
     </header>
 
-    <div class="hero">
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#training">Training Programs</a>
+        <a href="#contact-info">Contact</a>
+    </nav>
+
+    <div class="hero" id="hero">
         <h1>Expert Grant Writing & Consulting</h1>
         <p>We help non-profits, businesses, and community organizations navigate the grant landscape, craft compelling proposals, and build sustainable programs.</p>
         
         <div>
-            <!-- Schedule a Consultation Button with Black Background -->
-            <a href="#contact-info" class="btn-black">Schedule a Consultation</a>
+            <!-- Schedule a Consultation Button -->
+            <a href="#contact-info" class="btn-gold-text">Schedule a Consultation</a>
             
-            <!-- View Training Programs Button with High-Contrast White Background -->
-            <a href="#training" class="btn-white">View Training Programs</a>
+            <!-- View Training Programs Button -->
+            <a href="#training" class="btn-gold-text">View Training Programs</a>
         </div>
     </div>
 
-    <section id="training">
-        <h2>Our Training Programs</h2>
-        <p>Explore our specialized courses designed to build your team's grant writing capacity and strategic planning skills.</p>
+    <div class="container">
+        <section id="services">
+            <h2>Our Core Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Grant Research & Writing</h3>
+                    <p>Identify optimal funding opportunities matching your mission and develop meticulous, persuasive grant applications.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Strategic Planning</h3>
+                    <p>Build robust organizational frameworks and long-term financial strategies to maximize your community impact.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Proposal Review</h3>
+                    <p>Receive expert editorial oversight and constructive feedback on draft proposals before final submission deadlines.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="training">
+            <h2>Our Training Programs</h2>
+            <p>Explore our specialized courses designed to build your team's grant writing capacity, elevate proposal readiness, and master strategic execution planning.</p>
+            <ul>
+                <li><strong>Introduction to Grant Writing:</strong> Fundamentals of successful proposal development.</li>
+                <li><strong>Advanced Funding Strategies:</strong> Scaling non-profit revenue streams and institutional giving.</li>
+                <li><strong>Budgeting for Grants:</strong> Aligning financial figures with narrative objectives.</li>
+            </ul>
+        </section>
+    </div>
+
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2>About Pelican Grant Consulting</h2>
+            <p>With years of dedicated experience partnering with community builders, educators, and innovators, Pelican Grant Consulting Services provides clear, actionable guidance to secure the financial resources you need to thrive.</p>
+        </div>
     </section>
 
-    <section id="contact-info">
-        <h2>Contact Us</h2>
-        <p>Ready to get started? Reach out to schedule your consultation today.</p>
+    <section class="contact-section" id="contact-info">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>Ready to transform your organization's funding landscape? Reach out today to schedule your consultation and discuss your upcoming projects.</p>
+            <p><strong>Email:</strong> info@pelicangrantconsulting.com</p>
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+        </div>
     </section>
 
     <footer>
