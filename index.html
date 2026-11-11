@@ -34,7 +34,7 @@ body {
     margin: auto;
 }
 header {
-    background: var(--apa-black); /* Header background changed to black */
+    background: var(--apa-black);
     border-bottom: 3px solid var(--apa-gold);
     position: sticky;
     top: 0;
@@ -48,7 +48,7 @@ header {
     padding: 15px 0;
 }
 .company-name {
-    color: var(--apa-gold); /* Header text changed to old gold */
+    color: var(--apa-gold);
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
@@ -58,7 +58,7 @@ header {
     opacity: 0.8;
 }
 .tagline {
-    color: var(--apa-gold); /* Header text changed to old gold */
+    color: var(--apa-gold);
     font-size: 0.78rem;
     margin-top: 2px;
     font-weight: 600;
@@ -70,7 +70,7 @@ header {
     gap: 25px;
 }
 .nav-links a {
-    color: var(--apa-gold); /* Header nav links changed to old gold */
+    color: var(--apa-gold);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -114,27 +114,14 @@ header {
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.btn-primary {
-    background: var(--apa-black);
-    color: var(--apa-white);
-    border: 2px solid var(--apa-black);
-}
-.btn-primary:hover {
     background: var(--apa-gold);
     color: var(--apa-black);
-    border-color: var(--apa-gold);
-    transform: translateY(-2px);
+    border: 2px solid var(--apa-gold);
 }
-.btn-secondary {
+.btn:hover {
     background: var(--apa-black);
-    color: var(--apa-white);
-    border: 2px solid var(--apa-black);
-}
-.btn-secondary:hover {
-    background: var(--apa-gold);
-    color: var(--apa-black);
-    border-color: var(--apa-gold);
+    color: var(--apa-gold);
+    border-color: var(--apa-black);
     transform: translateY(-2px);
 }
 section {
@@ -247,9 +234,9 @@ form input:focus, form textarea:focus {
     box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
 }
 form button {
-    background: var(--apa-black);
-    color: var(--apa-white);
-    border: 2px solid var(--apa-black);
+    background: var(--apa-gold);
+    color: var(--apa-black);
+    border: 2px solid var(--apa-gold);
     padding: 12px 24px;
     border-radius: 4px;
     cursor: pointer;
@@ -257,25 +244,26 @@ form button {
     font-size: 1rem;
     transition: all 0.3s ease;
     width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 form button:hover {
-    background: var(--apa-gold);
-    color: var(--apa-black);
-    border-color: var(--apa-gold);
+    background: var(--apa-black);
+    color: var(--apa-gold);
+    border-color: var(--apa-black);
 }
 footer {
     background: var(--apa-black);
-    color: var(--apa-gold); /* Footer text changed to old gold */
+    color: var(--apa-gold);
     text-align: center;
     padding: 35px 20px;
     border-top: 3px solid var(--apa-gold);
 }
 footer h3 {
-    color: var(--apa-gold); /* Footer heading changed to old gold */
+    color: var(--apa-gold);
     margin-bottom: 8px;
 }
 footer p {
-    color: var(--apa-gold); /* Footer paragraphs changed to old gold */
+    color: var(--apa-gold);
     font-weight: 500;
 }
 @media(max-width: 768px) {
@@ -324,8 +312,8 @@ footer p {
     <div class="container">
         <h1>Helping Nonprofits Secure Funding, Strengthen Capacity, and Achieve <span>Lasting Impact</span></h1>
         <p>Pelican Grant Consulting Services provides grant consulting, grant management training, compliance support, funding strategy, and nonprofit capacity-building services throughout Louisiana and beyond.</p>
-        <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
-        <a href="#training" class="btn btn-secondary">View Training Programs</a>
+        <a href="#contact" class="btn">Schedule a Consultation</a>
+        <a href="#training" class="btn">View Training Programs</a>
     </div>
 </section>
 
@@ -435,7 +423,7 @@ footer p {
         <br>
         <p>Partner with Pelican Grant Consulting Services to build capacity, secure funding, and achieve sustainable results.</p>
         <br>
-        <a href="#contact" class="btn btn-secondary" style="background: var(--apa-gold); color: var(--apa-black); border-color: var(--apa-gold);">Contact Us Today</a>
+        <a href="#contact" class="btn">Contact Us Today</a>
     </div>
 </section>
 
