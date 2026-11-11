@@ -64,7 +64,7 @@
         }
 
         .tagline {
-            color: var(--white);
+            color: var(--old-gold);
             font-size: 0.85rem;
             margin-top: 3px;
         }
@@ -76,20 +76,20 @@
         }
 
         .nav-links a {
-            color: var(--white);
+            color: var(--old-gold);
             text-decoration: none;
             font-weight: 600;
         }
 
         .nav-links a:hover {
-            color: var(--old-gold);
+            color: var(--white);
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80");
+            background: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)), url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80");
             background-size: cover;
             background-position: center;
-            color: var(--white);
+            color: var(--old-gold);
             text-align: center;
             padding: 140px 20px;
             border-bottom: 4px solid var(--old-gold);
@@ -98,17 +98,19 @@
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
-            color: var(--white);
+            color: var(--old-gold);
         }
 
         .hero h1 span {
             color: var(--old-gold);
+            text-decoration: underline;
         }
 
         .hero p {
             max-width: 850px;
             margin: auto;
             font-size: 1.15rem;
+            color: var(--old-gold);
         }
 
         .btn {
@@ -127,12 +129,16 @@
         }
 
         .btn-primary:hover {
-            background: var(--white);
+            background: var(--black);
+            color: var(--old-gold);
+            border: 2px solid var(--old-gold);
+            padding: 12px 26px; /* Adjust padding to prevent layout shift with border */
         }
 
         .btn-secondary {
-            color: var(--white);
+            color: var(--old-gold);
             border: 2px solid var(--old-gold);
+            background: var(--black);
         }
 
         .btn-secondary:hover {
@@ -202,13 +208,17 @@
 
         .cta {
             background: var(--black);
-            color: var(--white);
+            color: var(--old-gold);
             text-align: center;
             border-top: 4px solid var(--old-gold);
             border-bottom: 4px solid var(--old-gold);
         }
 
         .cta h2 {
+            color: var(--old-gold);
+        }
+
+        .cta p {
             color: var(--old-gold);
         }
 
@@ -220,7 +230,7 @@
 
         .contact-info {
             background: var(--black);
-            color: var(--white);
+            color: var(--old-gold);
             padding: 35px;
             border-radius: 10px;
             border-left: 4px solid var(--old-gold);
@@ -229,6 +239,10 @@
         .contact-info h3 {
             color: var(--old-gold);
             margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: var(--old-gold);
         }
 
         form input, form textarea {
@@ -262,7 +276,7 @@
 
         footer {
             background: var(--black);
-            color: var(--white);
+            color: var(--old-gold);
             text-align: center;
             padding: 40px 30px;
             border-top: 3px solid var(--old-gold);
@@ -271,6 +285,10 @@
         footer h3 {
             color: var(--old-gold);
             margin-bottom: 10px;
+        }
+
+        footer p {
+            color: var(--old-gold);
         }
 
         @media(max-width: 768px) {
@@ -429,7 +447,7 @@
             <br>
             <p>Partner with Pelican Grant Consulting Services, LLC to build capacity, secure funding, and achieve sustainable results.</p>
             <br>
-            <a href="#contact" class="btn btn-primary">Contact Us Today</a>
+            <a href="#contact" class="btn btn-secondary">Contact Us Today</a>
         </div>
     </section>
 
