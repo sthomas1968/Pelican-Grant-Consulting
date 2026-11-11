@@ -7,9 +7,11 @@
 <meta name="description" content="Pelican Grant Consulting Services provides grant consulting, grant management training, compliance support, and nonprofit capacity-building services.">
 <style>
 :root {
-    --black: #000000;
-    --white: #FFFFFF;
-    --dark: #000000;
+    --apa-black: #0B0B0B;
+    --apa-gold: #D4AF37;
+    --apa-dark-gold: #B89728;
+    --apa-white: #FFFFFF;
+    --apa-offwhite: #FAF6EE;
 }
 * {
     margin: 0;
@@ -18,13 +20,13 @@
 }
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 75px;
+    scroll-padding-top: 85px;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: var(--dark);
-    background: var(--white);
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--apa-black);
+    background: var(--apa-offwhite);
 }
 .container {
     width: 90%;
@@ -32,211 +34,249 @@ body {
     margin: auto;
 }
 header {
-    background: var(--white);
-    border-bottom: 2px solid var(--black);
+    background: var(--apa-white);
+    border-bottom: 3px solid var(--apa-gold);
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
+    padding: 15px 0;
 }
 .company-name {
-    color: var(--black);
+    color: var(--apa-black);
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
+    letter-spacing: 0.5px;
 }
 .company-name:hover {
-    opacity: 0.8;
+    color: var(--apa-dark-gold);
 }
 .tagline {
-    color: var(--black);
-    font-size: 0.8rem;
+    color: var(--apa-black);
+    font-size: 0.78rem;
     margin-top: 2px;
     font-weight: 600;
+    letter-spacing: 0.3px;
 }
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 .nav-links a {
-    color: var(--black);
+    color: var(--apa-black);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
 }
 .nav-links a:hover {
-    text-decoration: underline;
+    color: var(--apa-dark-gold);
 }
 .hero {
-    background: var(--white);
-    color: var(--black);
+    background: linear-gradient(135deg, var(--apa-offwhite) 0%, var(--apa-white) 100%);
+    color: var(--apa-black);
     text-align: center;
-    padding: 40px 20px 50px 20px;
-    border-bottom: 3px solid var(--black);
+    padding: 50px 20px 60px 20px;
+    border-bottom: 4px solid var(--apa-gold);
 }
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     margin-bottom: 15px;
-    color: var(--black);
+    color: var(--apa-black);
+    line-height: 1.3;
 }
 .hero h1 span {
-    color: var(--black);
-    text-decoration: underline;
+    color: var(--apa-dark-gold);
+    border-bottom: 3px solid var(--apa-gold);
 }
 .hero p {
     max-width: 850px;
     margin: auto;
     font-size: 1.1rem;
-    color: var(--black);
-    font-weight: 500;
+    color: var(--apa-black);
+    font-weight: 400;
+    opacity: 0.9;
 }
 .btn {
     display: inline-block;
     margin: 20px 8px 0;
-    padding: 12px 24px;
-    border-radius: 5px;
+    padding: 12px 26px;
+    border-radius: 4px;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 .btn-primary {
-    background: var(--black);
-    color: var(--white);
-    border: 2px solid var(--black);
+    background: var(--apa-black);
+    color: var(--apa-white);
+    border: 2px solid var(--apa-black);
 }
 .btn-primary:hover {
-    background: var(--white);
-    color: var(--black);
+    background: var(--apa-gold);
+    color: var(--apa-black);
+    border-color: var(--apa-gold);
+    transform: translateY(-2px);
 }
 .btn-secondary {
-    background: var(--black);
-    color: var(--white);
-    border: 2px solid var(--black);
+    background: var(--apa-black);
+    color: var(--apa-white);
+    border: 2px solid var(--apa-black);
 }
 .btn-secondary:hover {
-    background: var(--white);
-    color: var(--black);
-}
-.btn:hover {
+    background: var(--apa-gold);
+    color: var(--apa-black);
+    border-color: var(--apa-gold);
     transform: translateY(-2px);
 }
 section {
-    padding: 45px 0;
-    background: var(--white);
+    padding: 50px 0;
+    background: var(--apa-offwhite);
+}
+section:nth-of-type(even) {
+    background: var(--apa-white);
 }
 .section-title {
     text-align: center;
-    color: var(--black);
-    margin-bottom: 30px;
-    font-size: 1.8rem;
+    color: var(--apa-black);
+    margin-bottom: 35px;
+    font-size: 2rem;
     position: relative;
+    font-weight: 700;
 }
 .section-title::after {
     content: '';
     display: block;
-    width: 50px;
+    width: 60px;
     height: 3px;
-    background: var(--black);
-    margin: 8px auto 0;
+    background: var(--apa-gold);
+    margin: 10px auto 0;
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 .card {
-    background: var(--white);
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-    border: 2px solid var(--black);
-    color: var(--black);
+    background: var(--apa-white);
+    padding: 28px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E5DEC9;
+    border-top: 4px solid var(--apa-gold);
+    color: var(--apa-black);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
 }
 .card h3 {
-    color: var(--black);
-    margin-bottom: 10px;
+    color: var(--apa-black);
+    margin-bottom: 12px;
+    font-size: 1.2rem;
 }
 .card p, .card li {
-    color: var(--black);
+    color: var(--apa-black);
+    opacity: 0.85;
+}
+.card ul {
+    padding-left: 20px;
 }
 .testimonial {
     font-style: italic;
-    font-weight: 500;
+    background: var(--apa-offwhite);
+    border-left: 4px solid var(--apa-gold);
 }
 .cta {
-    background: var(--white);
-    color: var(--black);
+    background: var(--apa-black);
+    color: var(--apa-white);
     text-align: center;
-    border-top: 3px solid var(--black);
-    border-bottom: 3px solid var(--black);
+    border-top: 4px solid var(--apa-gold);
+    border-bottom: 4px solid var(--apa-gold);
+    padding: 60px 20px;
+}
+.cta h2, .cta p {
+    color: var(--apa-white);
+}
+.cta .section-title::after {
+    background: var(--apa-gold);
 }
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 35px;
 }
 .contact-info {
-    background: var(--white);
-    color: var(--black);
-    padding: 25px;
-    border-radius: 8px;
-    border: 2px solid var(--black);
-    border-left: 6px solid var(--black);
+    background: var(--apa-white);
+    color: var(--apa-black);
+    padding: 30px;
+    border-radius: 6px;
+    border: 1px solid #E5DEC9;
+    border-left: 6px solid var(--apa-gold);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 .contact-info h3 {
-    color: var(--black);
+    color: var(--apa-black);
     margin-bottom: 15px;
 }
 form input, form textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 12px;
-    border: 2px solid var(--black);
-    border-radius: 5px;
-    background: var(--white);
-    color: var(--black);
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #D1C7AB;
+    border-radius: 4px;
+    background: var(--apa-white);
+    color: var(--apa-black);
+    font-size: 1rem;
 }
 form input::placeholder, form textarea::placeholder {
-    color: rgba(0, 0, 0, 0.6);
+    color: #666666;
 }
 form input:focus, form textarea:focus {
     outline: none;
-    border-color: var(--black);
-    background: #f9f9f9;
+    border-color: var(--apa-gold);
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
 }
 form button {
-    background: var(--black);
-    color: var(--white);
-    border: 2px solid var(--black);
-    padding: 12px 22px;
-    border-radius: 5px;
+    background: var(--apa-black);
+    color: var(--apa-white);
+    border: 2px solid var(--apa-black);
+    padding: 12px 24px;
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
 }
 form button:hover {
-    background: var(--white);
-    color: var(--black);
+    background: var(--apa-gold);
+    color: var(--apa-black);
+    border-color: var(--apa-gold);
 }
 footer {
-    background: var(--white);
-    color: var(--black);
+    background: var(--apa-black);
+    color: var(--apa-white);
     text-align: center;
-    padding: 30px 20px;
-    border-top: 2px solid var(--black);
+    padding: 35px 20px;
+    border-top: 3px solid var(--apa-gold);
 }
 footer h3 {
-    color: var(--black);
+    color: var(--apa-gold);
     margin-bottom: 8px;
 }
 footer p {
-    color: var(--black);
-    font-weight: 600;
+    color: var(--apa-white);
+    opacity: 0.9;
+    font-weight: 500;
 }
 @media(max-width: 768px) {
     .navbar {
@@ -246,16 +286,17 @@ footer p {
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 15px;
+        gap: 15px;
     }
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     .contact-grid {
         grid-template-columns: 1fr;
     }
     .company-name {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 }
 </style>
@@ -390,11 +431,11 @@ footer p {
 
 <section class="cta">
     <div class="container">
-        <h2>Ready to Strengthen Your Funding Strategy?</h2>
+        <h2 class="section-title" style="color: var(--apa-white);">Ready to Strengthen Your Funding Strategy?</h2>
         <br>
         <p>Partner with Pelican Grant Consulting Services to build capacity, secure funding, and achieve sustainable results.</p>
         <br>
-        <a href="#contact" class="btn btn-secondary">Contact Us Today</a>
+        <a href="#contact" class="btn btn-secondary" style="background: var(--apa-gold); color: var(--apa-black); border-color: var(--apa-gold);">Contact Us Today</a>
     </div>
 </section>
 
@@ -434,7 +475,7 @@ footer p {
                     <input type="email" name="email" placeholder="Email Address" required>
                     <input type="tel" name="phone" placeholder="Phone Number">
                     <input type="text" name="services" placeholder="Services Requested">
-                    <textarea name="message" rows="5" placeholder="Tell us about your organization's needs"></textarea>
+                    <textarea name="message" rows="4" placeholder="Tell us about your organization's needs"></textarea>
                     <button type="submit">Submit Inquiry</button>
                 </form>
             </div>
