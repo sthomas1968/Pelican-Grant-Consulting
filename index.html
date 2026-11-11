@@ -3,18 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Pelican Grant Consulting Services</title>
-
 <meta name="description" content="Pelican Grant Consulting Services provides grant consulting, grant management training, compliance support, and nonprofit capacity-building services.">
-
 <style>
-
 :root{
-    --black:#000000;
-    --Old Gold:#D4AF37;
+    --black:#111111;
+    --old-gold:#D4AF37;
     --gold:#D4A017;
-    --black:#FFFFFF;
+    --white:#FFFFFF;
     --light:#F7F9FC;
     --dark:#333333;
 }
@@ -46,6 +42,7 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
+    border-bottom: 2px solid var(--old-gold);
 }
 
 .navbar{
@@ -56,13 +53,13 @@ header{
 }
 
 .company-name{
-    color:old gold;
+    color:var(--old-gold);
     font-size:1.6rem;
     font-weight:700;
 }
 
 .tagline{
-    color:var(--gold);
+    color:var(--white);
     font-size:.85rem;
     margin-top:3px;
 }
@@ -74,22 +71,23 @@ header{
 }
 
 .nav-links a{
-    color:black;
+    color:var(--white);
     text-decoration:none;
     font-weight:600;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover{
-    color:var(--gold);
+    color:var(--old-gold);
 }
 
 .hero{
-    background:
-    linear-gradient(rgba(30,58,95,.85),rgba(30,58,95,.85)),
+    background: 
+    linear-gradient(rgba(212,175,55,.85), rgba(212,175,55,.85)), 
     url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80");
     background-size:cover;
     background-position:center;
-    color:black;
+    color:var(--black);
     text-align:center;
     padding:140px 20px;
 }
@@ -97,12 +95,15 @@ header{
 .hero h1{
     font-size:3rem;
     margin-bottom:20px;
+    color:var(--black);
 }
 
 .hero p{
     max-width:850px;
     margin:auto;
     font-size:1.15rem;
+    color:var(--black);
+    font-weight: 500;
 }
 
 .btn{
@@ -116,13 +117,18 @@ header{
 }
 
 .btn-primary{
-    background:var(--old gold);
-    color:black;
+    background:var(--black);
+    color:var(--old-gold);
 }
 
 .btn-secondary{
-    color:black;
-    border:2px solid black;
+    color:var(--black);
+    border:2px solid var(--black);
+}
+
+.btn-secondary:hover {
+    background:var(--black);
+    color:var(--old-gold);
 }
 
 .btn:hover{
@@ -135,7 +141,7 @@ section{
 
 .section-title{
     text-align:center;
-    color:var(--old gold);
+    color:var(--old-gold);
     margin-bottom:50px;
     font-size:2rem;
 }
@@ -154,7 +160,7 @@ section{
 }
 
 .card h3{
-    color:var(--teal);
+    color:var(--black);
     margin-bottom:15px;
 }
 
@@ -175,27 +181,44 @@ section{
 }
 
 .cta{
-    background:var(--old gold);
-    color:white;
+    background:var(--old-gold);
+    color:var(--black);
     text-align:center;
+}
+
+.cta h2, .cta p {
+    color: var(--black);
 }
 
 .contact-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:40px;
+    align-items: start;
 }
 
 .contact-info{
-    background:var(--old gold);
-    color:white;
+    background:var(--old-gold);
+    color:var(--black);
     padding:35px;
     border-radius:10px;
 }
 
 .contact-info h3{
-    color:var(--old gold);
+    color:var(--black);
     margin-bottom:20px;
+}
+
+.contact-form-container {
+    background: var(--light);
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid #e1e4e8;
+}
+
+.contact-form-container h3 {
+    color: var(--black);
+    margin-bottom: 20px;
 }
 
 form input,
@@ -208,382 +231,236 @@ form textarea{
 }
 
 form button{
-    background:var(--old gold);
-    color:white;
+    background:var(--black);
+    color:var(--old-gold);
     border:none;
     padding:14px 24px;
     border-radius:5px;
     cursor:pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+form button:hover {
+    opacity: 0.9;
 }
 
 footer{
-    background:#10233d;
-    color:white;
+    background:var(--black);
+    color:var(--white);
     text-align:center;
     padding:30px;
+    border-top: 2px solid var(--old-gold);
 }
 
 @media(max-width:768px){
-
-.navbar{
-    flex-direction:column;
-    text-align:center;
+    .navbar{
+        flex-direction:column;
+        text-align:center;
+    }
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        margin-top:15px;
+    }
+    .hero h1{
+        font-size:2rem;
+    }
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+    .company-name{
+        font-size:1.2rem;
+    }
 }
-
-.nav-links{
-    flex-wrap:wrap;
-    justify-content:center;
-    margin-top:15px;
-}
-
-.hero h1{
-    font-size:2rem;
-}
-
-.contact-grid{
-    grid-template-columns:1fr;
-}
-
-.company-name{
-    font-size:1.2rem;
-}
-
-}
-
 </style>
-
 </head>
-
 <body>
 
 <header>
-
-<div class="container navbar">
-
-<div>
-<div class="company-name">
-Pelican Grant Consulting Services
-</div>
-
-<div class="tagline">
-Empowering Nonprofits Through Funding, Compliance, and Sustainable Growth
-</div>
-</div>
-
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#training">Training</a></li>
-<li><a href="#resources">Resources</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</div>
-
+    <div class="container navbar">
+        <div>
+            <div class="company-name">Pelican Grant Consulting Services</div>
+            <div class="tagline">Empowering Nonprofits Through Funding, Compliance, and Sustainable Growth</div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#training">Training</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#contact-info">Contact</a></li>
+        </ul>
+    </div>
 </header>
 
 <section id="home" class="hero">
-
-<div class="container">
-<h1>
-Helping Nonprofits Secure Funding, Strengthen Capacity, and Achieve Lasting Impact
-</h1>
-<p>
-Pelican Grant Consulting Services provides grant consulting,
-grant management training, compliance support, funding strategy,
-and nonprofit capacity-building services throughout Louisiana and beyond.
-</p>
-<a href="#contact" class="btn btn-primary">
-Schedule a Consultation
-</a>
-
-<a href="#training" class="btn btn-secondary">
-View Training Programs
-</a>
-
-</div>
-
+    <div class="container">
+        <h1>Helping Nonprofits Secure Funding, Strengthen Capacity, and Achieve Lasting Impact</h1>
+        <p>Pelican Grant Consulting Services provides grant consulting, grant management training, compliance support, funding strategy, and nonprofit capacity-building services throughout Louisiana and beyond.</p>
+        <a href="#contact-info" class="btn btn-primary">Schedule a Consultation</a>
+        <a href="#training" class="btn btn-secondary">View Training Programs</a>
+    </div>
 </section>
 
 <section id="about" class="about">
-
-<div class="container">
-
-<h2 class="section-title">About Us</h2>
-<p>
-Pelican Grant Consulting Services helps nonprofit organizations,
-community-based organizations, educational institutions, faith-based organizations,
-and local governments strengthen their ability to secure and manage grant funding.
-</p>
-<br>
-<p>
-We provide practical consulting, technical assistance, and training designed
-to improve organizational capacity, strengthen compliance practices,
-and support long-term sustainability.
-</p>
-</div>
-
+    <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <p>Pelican Grant Consulting Services helps nonprofit organizations, community-based organizations, educational institutions, faith-based organizations, and local governments strengthen their ability to secure and manage grant funding.</p>
+        <br>
+        <p>We provide practical consulting, technical assistance, and training designed to improve organizational capacity, strengthen compliance practices, and support long-term sustainability.</p>
+    </div>
 </section>
 
 <section id="services">
-
-<div class="container">
-
-<h2 class="section-title">Consulting Services</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Grant Readiness Assessments</h3>
-<p>Evaluate organizational readiness and build a successful funding foundation.</p>
-</div>
-
-<div class="card">
-<h3>Funding Research</h3>
-<p>Identify federal, state, foundation, and corporate funding opportunities.</p>
-</div>
-
-<div class="card">
-<h3>Grant Writing Support</h3>
-<p>Develop competitive proposals aligned with funder priorities.</p>
-</div>
-
-<div class="card">
-<h3>Program Design</h3>
-<p>Create measurable program goals, objectives, outcomes, and logic models.</p>
-</div>
-
-<div class="card">
-<h3>Grant Management</h3>
-<p>Support post-award implementation, reporting, and monitoring.</p>
-</div>
-
-<div class="card">
-<h3>Compliance Assistance</h3>
-<p>Navigate federal regulations, compliance requirements, and reporting obligations.</p>
-</div>
-
-</div>
-
-</div>
-
+    <div class="container">
+        <h2 class="section-title">Consulting Services</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Grant Readiness Assessments</h3>
+                <p>Evaluate organizational readiness and build a successful funding foundation.</p>
+            </div>
+            <div class="card">
+                <h3>Funding Research</h3>
+                <p>Identify federal, state, foundation, and corporate funding opportunities.</p>
+            </div>
+            <div class="card">
+                <h3>Grant Writing Support</h3>
+                <p>Develop competitive proposals aligned with funder priorities.</p>
+            </div>
+            <div class="card">
+                <h3>Program Design</h3>
+                <p>Create measurable program goals, objectives, outcomes, and logic models.</p>
+            </div>
+            <div class="card">
+                <h3>Grant Management</h3>
+                <p>Support post-award implementation, reporting, and monitoring.</p>
+            </div>
+            <div class="card">
+                <h3>Compliance Assistance</h3>
+                <p>Navigate federal regulations, compliance requirements, and reporting obligations.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="training" class="training">
-
-<div class="container">
-
-<h2 class="section-title">Training Programs</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Grant Lifecycle Training</h3>
-<p>Learn every phase of the grant process from planning through closeout.</p>
-</div>
-
-<div class="card">
-<h3>Grant Writing Workshops</h3>
-<p>Build stronger proposal development and storytelling skills.</p>
-</div>
-
-<div class="card">
-<h3>Grant Management Training</h3>
-<p>Improve oversight, reporting, and award administration practices.</p>
-</div>
-
-<div class="card">
-<h3>Budget Development</h3>
-<p>Create compliant and realistic budgets for funding applications.</p>
-</div>
-
-<div class="card">
-<h3>Single Audit Readiness</h3>
-<p>Prepare your organization for federal audit requirements.</p>
-</div>
-
-<div class="card">
-<h3>Customized Team Training</h3>
-<p>Tailored workshops designed around your organization's needs.</p>
-</div>
-
-</div>
-
-</div>
-
+    <div class="container">
+        <h2 class="section-title">Training Programs</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Grant Lifecycle Training</h3>
+                <p>Learn every phase of the grant process from planning through closeout.</p>
+            </div>
+            <div class="card">
+                <h3>Grant Writing Workshops</h3>
+                <p>Build stronger proposal development and storytelling skills.</p>
+            </div>
+            <div class="card">
+                <h3>Grant Management Training</h3>
+                <p>Improve oversight, reporting, and award administration practices.</p>
+            </div>
+            <div class="card">
+                <h3>Budget Development</h3>
+                <p>Create compliant and realistic budgets for funding applications.</p>
+            </div>
+            <div class="card">
+                <h3>Single Audit Readiness</h3>
+                <p>Prepare your organization for federal audit requirements.</p>
+            </div>
+            <div class="card">
+                <h3>Customized Team Training</h3>
+                <p>Tailored workshops designed around your organization's needs.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="resources">
-
-<div class="container">
-
-<h2 class="section-title">Resources</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Free Downloads</h3>
-<ul>
-<li>Grant Readiness Checklist</li>
-<li>Grant Budget Template</li>
-<li>Proposal Planning Worksheet</li>
-<li>Grant Management Checklist</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Educational Resources</h3>
-<ul>
-<li>Grant Writing Fundamentals</li>
-<li>Federal Compliance Basics</li>
-<li>Performance Measurement</li>
-<li>Monitoring and Reporting</li>
-<li>Grant Closeout Procedures</li>
-</ul>
-</div>
-
-</div>
-
-</div>
-
+    <div class="container">
+        <h2 class="section-title">Resources</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Free Downloads</h3>
+                <ul>
+                    <li>Grant Readiness Checklist</li>
+                    <li>Grant Budget Template</li>
+                    <li>Proposal Planning Worksheet</li>
+                    <li>Grant Management Checklist</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Educational Resources</h3>
+                <ul>
+                    <li>Grant Writing Fundamentals</li>
+                    <li>Federal Compliance Basics</li>
+                    <li>Performance Measurement</li>
+                    <li>Monitoring and Reporting</li>
+                    <li>Grant Closeout Procedures</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="cta">
-
-<div class="container">
-
-<h2>
-Ready to Strengthen Your Funding Strategy?
-</h2>
-
-<br>
-
-<p>
-Partner with Pelican Grant Consulting Services to build capacity,
-secure funding, and achieve sustainable results.
-</p>
-
-<br>
-
-<a href="#contact" class="btn btn-primary">
-Contact Us Today
-</a>
-
-</div>
-
+    <div class="container">
+        <h2>Ready to Strengthen Your Funding Strategy?</h2>
+        <br>
+        <p>Partner with Pelican Grant Consulting Services to build capacity, secure funding, and achieve sustainable results.</p>
+        <br>
+        <a href="#contact-info" class="btn btn-primary">Contact Us Today</a>
+    </div>
 </section>
 
 <section class="testimonials">
-
-<div class="container">
-
-<h2 class="section-title">Client Feedback</h2>
-
-<div class="grid">
-
-<div class="card testimonial">
-"The training provided practical tools our team could implement immediately."
-</div>
-
-<div class="card testimonial">
-"Our organization strengthened its grant readiness and improved funding outcomes."
-</div>
-
-<div class="card testimonial">
-"Excellent support with compliance, reporting, and grant management."
-</div>
-
-</div>
-
-</div>
-
+    <div class="container">
+        <h2 class="section-title">Client Feedback</h2>
+        <div class="grid">
+            <div class="card testimonial">"The training provided practical tools our team could implement immediately."</div>
+            <div class="card testimonial">"Our organization strengthened its grant readiness and improved funding outcomes."</div>
+            <div class="card testimonial">"Excellent support with compliance, reporting, and grant management."</div>
+        </div>
+    </div>
 </section>
 
 <section id="contact-info">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-grid">
+            <!-- Left Column: Contact Details -->
+            <div class="contact-info">
+                <h3>Pelican Grant Consulting Services</h3>
+                <p><strong>Location:</strong> 243 Cross Gates Blvd.<br>Slidell, Louisiana 70461</p>
+                <p><strong>Email:</strong> sthomas9554@msn.com</p>
+                <p><strong>Phone:</strong> (504) 400-5197</p>
+                <br>
+                <p>Let's discuss your funding goals, training needs, and organizational priorities.</p>
+            </div>
 
-<div class="container">
-
-<h2 class="section-title">Contact Us</h2>
-
-<div class="contact-grid">
-
-<div class="contact-info">
-
-<h3>Pelican Grant Consulting Services</h3>
-
-<p><strong>Location:</strong> 243 Cross Gates Blvd.<p></strong>     </p>Slidell, Louisiana 70461</p>
-
-<p><strong>Email:</strong> sthomas9554@msn.com</p>
-
-<p><strong>Phone:</strong> (504) 400-5197</p>
-
-<br>
-
-<p>
-Let's discuss your funding goals, training needs, and organizational priorities.
-</p>
-
-</div>
-
-<div>
-
-<form action="https://formspree.io/f/mvkkjgvy" method="POST">
-
-<input type="text"
-       name="name"
-       placeholder="Full Name"
-       required>
-
-<input type="text"
-       name="organization"
-       placeholder="Organization">
-
-<input type="email"
-       name="email"
-       placeholder="Email Address"
-       required>
-
-<input type="tel"
-       name="phone"
-       placeholder="Phone Number">
-
-<input type="text"
-       name="services"
-       placeholder="Services Requested">
-
-<textarea name="message"
-          rows="6"
-          placeholder="Tell us about your organization's needs"></textarea>
-
-<button type="submit">
-Submit Inquiry
-</button>
-
-</div>
-
-</div>
-
-</div>
-
+            <!-- Right Column: Company Name & Customer Form -->
+            <div class="contact-form-container">
+                <h3>Pelican Grant Consulting Services</h3>
+                <form action="https://formspree.io/f/mvkkjgvy" method="POST">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="text" name="organization" placeholder="Organization">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="tel" name="phone" placeholder="Phone Number">
+                    <input type="text" name="services" placeholder="Services Requested">
+                    <textarea name="message" rows="6" placeholder="Tell us about your organization's needs"></textarea>
+                    <button type="submit">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
 
 <footer>
-
-<h3>Pelican Grant Consulting Services</h3>
-
-<p>
-Grant Consulting • Grant Training • Compliance Support
-</p>
-
-<br>
-
-<p>
-© 2026 Pelican Grant Consulting Services. All Rights Reserved.
-</p>
-
+    <h3>Pelican Grant Consulting Services</h3>
+    <p>Grant Consulting • Grant Training • Compliance Support</p>
+    <br>
+    <p>© 2026 Pelican Grant Consulting Services. All Rights Reserved.</p>
 </footer>
 
 </body>
-</html> 
-
+</html>
